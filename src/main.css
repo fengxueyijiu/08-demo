@@ -1,0 +1,74 @@
+
+button:focus, button:active,button:visited{
+  outline: none;
+}
+/*app*/
+.my-wrap{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.main{
+  flex-grow: 1;
+  overflow-y: scroll;
+  color: #fff;
+  display: flex;
+}
+.nav-footer{
+  height: 80px;
+  background-color: #00bcd4;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-footer a{
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.4);
+  flex-grow: 1;
+}
+.nav-footer a:last-child{
+  border: none;
+}
+.nav-header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background: #00bcd4;
+  padding: 0 5px;
+  flex-shrink: 0;
+}
+.nav-header h3{
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+}
+.nav-header button{
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+}
+.home-wrap{
+  background-image: url(./images/3.jpg);
+  flex-grow: 1;
+  background-size: cover;
+  background-position: 50% 50%;
+  display: flex;
+}
+.home-cover{
+  flex-grow: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  display: flex;
+}
+.home-item{
+  text-align: center;
+  margin: 0 auto;
+  font-weight: bold;
+}
