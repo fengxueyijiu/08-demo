@@ -2,3 +2,7 @@
 node_modules
 npm-debug.log
 dist
+src
+LICENSE
+package.json
+README.md
