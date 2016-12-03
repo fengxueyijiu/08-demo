@@ -3,7 +3,8 @@ import RaisedButton from 'material-ui/RaisedButton';
 class BlogCard extends React.Component {
   render () {
     let style={
-      backgroundColor:'#C6FF00'
+      backgroundColor:'#9E9E9E',
+      borderRadius:'4px'
     }
     return(
       <div className='blog-card'>
@@ -15,7 +16,7 @@ class BlogCard extends React.Component {
           <p>
             {this.props.desc}
           </p>
-          <RaisedButton label="阅读更多" primary={true} buttonStyle={style} />
+          <RaisedButton label="阅读更多" primary={true} buttonStyle={style} href={`#/item/${this.props.url}`}/>
         </div>
       </div>
     )

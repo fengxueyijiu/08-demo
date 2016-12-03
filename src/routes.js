@@ -5,6 +5,8 @@ import Home from './Home/';
 import About from './About';
 import Work from './Work/';
 import Blog from './Blog/';
+import Item from './Item'
+import NoMatch from './component/NoMatch';
 class Routers extends React.Component {
   render () {
     return(
@@ -12,8 +14,10 @@ class Routers extends React.Component {
         <Route path='/' component={App}>
             <IndexRoute component={Home} />
             <Route path='/blog' component={Blog}/>
-            <Route path='/work' component={Work}/>
-            <Route path='/about' component={About}/>
+            <Route path='work' component={Work}/>
+            <Route path='about' component={About}/>
+            <Route path='item/:title' component={Item}/>
+            <Route path='*' component={NoMatch}></Route>
         </Route>
       </Router>
     )

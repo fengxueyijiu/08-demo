@@ -31,7 +31,7 @@ class Work extends React.Component {
   render () {
 
     return(
-      <div id='main' style={{width:'100%',height:'auto',maxWidth:"600px"}}>
+      <div id='main' style={{width:'100%',height:'auto',maxWidth:"600px",margin:'0 auto'}}>
         Work
       </div>
     )
