@@ -1,16 +1,29 @@
 import React, { PropTypes } from 'react'
 import marked from 'marked';
+import axios from 'axios';
+import Loading from '../component/Loading';
 console.log(marked('I am using __markdown__.'));
 class Item extends React.Component {
+  constructor(){
+    super();
+    this.state={
+      data:''
+    }
+  }
+  componentDidMount(){
+    let address=this.props.params.title;
+    axios.get(`https://raw.githubusercontent.com/fengxueyijiu/08-demo/master/data/${address}.md`)
+        .then(res => this.setState({data:res.data}))
+        .catch(err => alert(err))
+  }
   render () {
-    console.log(this.props.params);
-    let content=this.props.params.title==1 ? '这是1':
-        this.props.params.title==2 ? '这是2':3
     return(
-      <div>
-        {content}
+      <div className='item-wrap'>
+        {this.state.data.length==0 ? <Loading /> :
+        <div className='post-wrap' dangerouslySetInnerHTML={{__html:marked(this.state.data)}}/>}
         {/* {marked('# dddddd')} '这样写markdown是错误的'*/}
-        <div dangerouslySetInnerHTML={{__html:marked('# dddddd')}}/>
+        {/* <div dangerouslySetInnerHTML={{__html:marked('# dddddd')}}/> */}
+
       </div>
     )
   }
