@@ -1,3 +1,6 @@
 .post-wrap{
   padding: 20px;
 }
+.post-wrap p{
+  color: red;
+}
