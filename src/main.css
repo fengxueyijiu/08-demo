@@ -83,7 +83,7 @@ button:focus, button:active,button:visited{
   background-image: url(./images/3.jpg);
   flex-grow: 1;
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 14% 50%;
   display: flex;
 }
 .home-cover{
